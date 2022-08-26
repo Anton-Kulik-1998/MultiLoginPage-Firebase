@@ -11,6 +11,10 @@
 		3A1EFA6728B8E8CE00B25115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1EFA6628B8E8CE00B25115 /* ContentView.swift */; };
 		3A1EFA6928B8E8CF00B25115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A1EFA6828B8E8CF00B25115 /* Assets.xcassets */; };
 		3A1EFA6C28B8E8CF00B25115 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A1EFA6B28B8E8CF00B25115 /* Preview Assets.xcassets */; };
+		3AE3746428B9473F00BFD072 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE3746328B9473F00BFD072 /* FirebaseAuth */; };
+		3AE3746728B9493E00BFD072 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE3746628B9493E00BFD072 /* GoogleSignIn */; };
+		3AE3746928B9493E00BFD072 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE3746828B9493E00BFD072 /* GoogleSignInSwift */; };
+		3AE3746B28B94A5C00BFD072 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AE3746A28B94A5C00BFD072 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		3A1EFA6628B8E8CE00B25115 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A1EFA6828B8E8CF00B25115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A1EFA6B28B8E8CF00B25115 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3AE3746A28B94A5C00BFD072 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AE3746C28B94C3A00BFD072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3AE3746D28B94CC700BFD072 /* MultiLoginPage-Firebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MultiLoginPage-Firebase.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE3746928B9493E00BFD072 /* GoogleSignInSwift in Frameworks */,
+				3AE3746428B9473F00BFD072 /* FirebaseAuth in Frameworks */,
+				3AE3746728B9493E00BFD072 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +61,12 @@
 		3A1EFA6328B8E8CE00B25115 /* MultiLoginPage-Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				3AE3747028B94E1C00BFD072 /* Model */,
+				3AE3746F28B94E1200BFD072 /* ViewModel */,
+				3AE3746E28B94E0500BFD072 /* View */,
+				3AE3746D28B94CC700BFD072 /* MultiLoginPage-Firebase.entitlements */,
+				3AE3746C28B94C3A00BFD072 /* Info.plist */,
+				3AE3746A28B94A5C00BFD072 /* GoogleService-Info.plist */,
 				3A1EFA6428B8E8CE00B25115 /* MultiLoginPage_FirebaseApp.swift */,
 				3A1EFA6628B8E8CE00B25115 /* ContentView.swift */,
 				3A1EFA6828B8E8CF00B25115 /* Assets.xcassets */,
@@ -65,6 +81,27 @@
 				3A1EFA6B28B8E8CF00B25115 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AE3746E28B94E0500BFD072 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AE3746F28B94E1200BFD072 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3AE3747028B94E1C00BFD072 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,11 @@
 			dependencies = (
 			);
 			name = "MultiLoginPage-Firebase";
+			packageProductDependencies = (
+				3AE3746328B9473F00BFD072 /* FirebaseAuth */,
+				3AE3746628B9493E00BFD072 /* GoogleSignIn */,
+				3AE3746828B9493E00BFD072 /* GoogleSignInSwift */,
+			);
 			productName = "MultiLoginPage-Firebase";
 			productReference = 3A1EFA6128B8E8CE00B25115 /* MultiLoginPage-Firebase.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +153,10 @@
 				Base,
 			);
 			mainGroup = 3A1EFA5828B8E8CE00B25115;
+			packageReferences = (
+				3AE3746228B9473F00BFD072 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3AE3746528B9493E00BFD072 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 3A1EFA6228B8E8CE00B25115 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +173,7 @@
 			files = (
 				3A1EFA6C28B8E8CF00B25115 /* Preview Assets.xcassets in Resources */,
 				3A1EFA6928B8E8CF00B25115 /* Assets.xcassets in Resources */,
+				3AE3746B28B94A5C00BFD072 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,12 +311,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MultiLoginPage-Firebase/MultiLoginPage-Firebase.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MultiLoginPage-Firebase/Preview Content\"";
 				DEVELOPMENT_TEAM = M22QR6853N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MultiLoginPage-Firebase/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +342,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MultiLoginPage-Firebase/MultiLoginPage-Firebase.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MultiLoginPage-Firebase/Preview Content\"";
 				DEVELOPMENT_TEAM = M22QR6853N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MultiLoginPage-Firebase/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +390,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3AE3746228B9473F00BFD072 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3AE3746528B9493E00BFD072 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3AE3746328B9473F00BFD072 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AE3746228B9473F00BFD072 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3AE3746628B9493E00BFD072 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AE3746528B9493E00BFD072 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		3AE3746828B9493E00BFD072 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AE3746528B9493E00BFD072 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A1EFA5928B8E8CE00B25115 /* Project object */;
 }

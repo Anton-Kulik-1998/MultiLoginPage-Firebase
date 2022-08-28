@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+//MARK: Intergrating Apple Sign In
+import AuthenticationServices
 
 struct Login: View {
     @StateObject var loginModel: LoginViewModel = .init()
@@ -69,6 +71,32 @@ struct Login: View {
                     }
                 }
                 .padding(.top, 30)
+                
+//                SignInWithAppleButton { (request) in
+//                    
+//                    //requesting parameters from apple login
+//                    loginModel.nonce = randomNonceString()
+//                    request.requestedScopes = [.email, .fullName]
+//                    request.nonce = sha256(loginModel.nonce)
+//                    
+//                } onCompletion: { (request) in
+//                    switch result {
+//                    case .success(let user)
+//                        print("success")
+//                        //do Login With Firebase...
+//                        guard let credential = user.credential as?
+//                        ASAuthorizationAppleIDCredential else {
+//                            print("error with firebase")
+//                            return
+//                        }
+//                        loginModel.authenticate(credential: credential)
+//                    case .failure(let error):
+//                        print(error.localizedDescription)
+//                    }
+//                }
+//                .signInWithAppleButtonStyle(.white)
+//                .frame(height: 55)
+//                .clipShape(Capsule())
 
             }
             .padding(.leading, 60)

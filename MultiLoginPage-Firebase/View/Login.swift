@@ -31,6 +31,19 @@ struct Login: View {
                 CustomTextField(hint: "+38 6505551234", text: $loginModel.mobileNo)
                     .disabled(loginModel.showOPTField)
                     .opacity(loginModel.showOPTField ? 0.4 : 1)
+                    .overlay(alignment: .trailing, content: {
+                        Button("Change") {
+                            withAnimation(.easeInOut) {
+                                loginModel.showOPTField = false
+                                loginModel.otpCode = ""
+                                loginModel.CLIENT_CODE = ""
+                            }
+                        }
+                        .font(.caption)
+                        .foregroundColor(.indigo)
+                        .opacity(loginModel.showOPTField ? 1 : 0)
+                        .padding(.trailing, 15)
+                    })
                     .padding(.top, 50)
                 
                 CustomTextField(hint: "OTP Code", text: $loginModel.otpCode)
@@ -60,7 +73,8 @@ struct Login: View {
             }
             .padding(.leading, 60)
             .padding(.vertical, 15)
-            
+        }
+        .alert(loginModel.errorMassage, isPresented: $loginModel.showError) {
         }
     }
 }

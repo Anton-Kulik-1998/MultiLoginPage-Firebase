@@ -32,7 +32,8 @@ class LoginViewModel: ObservableObject {
                 let code = try await PhoneAuthProvider.provider().verifyPhoneNumber("+\(mobileNo)", uiDelegate: nil)
                 await MainActor.run(body: {
                     CLIENT_CODE = code
-                    
+                    //MARK: Enabling OTP Field When It's Success
+                    withAnimation(.easeInOut) {showOPTField = true}
                 })
             } catch {
                 await handleError(error: error)

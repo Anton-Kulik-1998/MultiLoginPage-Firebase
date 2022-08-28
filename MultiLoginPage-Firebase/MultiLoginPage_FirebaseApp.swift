@@ -15,3 +15,6 @@ struct MultiLoginPage_FirebaseApp: App {
         }
     }
 }
+
+
+//MARK: Initializing Firebase
